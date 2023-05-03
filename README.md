@@ -1,8 +1,16 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Next.js with Feature-Sliced Design
 
-## Getting Started
+This is a Next.js frontend web application designed using the Feature-Sliced Design architectural methodology.
 
-First, run the development server:
+## Installation and Running
+
+To get started with the project, you can run the following commands:
+
+```bash
+npm install
+# or
+yarn install
+```
 
 ```bash
 npm run dev
@@ -12,25 +20,89 @@ yarn dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+# Next.js with Feature-Sliced Design
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+This is a [Next.js](https://nextjs.org/) frontend web application designed using
+the [Feature-Sliced Design](https://feature-sliced.design/) architectural methodology.
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+## Usage
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+This project can be used to build small to medium-sized web applications. To add new features, it is recommended to use
+the Feature-Sliced Design architectural methodology.
+
+## File and Folder Structure
+
+    .
+    ├── ...
+    ├── src                 # Feature-sliced structures.
+    │   ├── app             # App-wide settings, styles and providers.
+    │   ├── pages           # Next.js pages from entities, features and widgets.
+    │   ├── widgets         # Compositional layer to combine entities and features into meaningful blocks.(e.g. IssuesList, UserProfile).
+    │   ├── features        # User interactions, actions that bring business value to the user.(e.g. SendComment, AddToCart, UsersSearch).
+    │   ├── entities        # Business entities.(e.g., User, Product, Order).
+    │   │   ├── ...
+    │   │   ├── user        # Slice from bussines entities.
+    │   │   ├── post        # Slice from bussines entities.
+    │   │   ├── comment     # Slice from bussines entities.
+    │   │   │   ├── ...
+    │   │   │   ├── ui      # UI components, data formatting functions
+    │   │   │   ├── model   # Data storage, functions to manipulate this data
+    │   │   │   ├── lib     # Logic of data manipulation, event handlers, auxiliary code
+    │   │   │   ├── api     # Communication with external APIs, backend API methods
+    │   │   │   └── ...
+    │   │   └── ...
+    │   ├── shared          # Reusable functionality, detached from the specifics of the project/business.(e.g. UIKit, libs, API).
+    ├── public              # Static assets.
+    └── ...
+
+## Guide
+
+To work with the code, you can follow the following guidelines:
+
+- There are 6 layers in total, arranged from most responsibility and dependency to least:
+-
+    - App
+-
+    - Pages
+-
+    - Widgets
+-
+    - Features
+-
+    - Entities
+-
+    - Shared
+- You don't have to use every layer in your project — only add them if you think it brings value to your project.
+- Slices are the second level in the organizational hierarchy of Feature-Sliced Design. Their main purpose is to group
+  code by its meaning for the product, business or just the application.
+-
+- Segments are the third and final level in the organizational hierarchy, and their purpose is to group code by its
+  technical nature.
+- There a few standardized segment names:
+-
+    - ui — UI components, data formatting functions
+-
+    - model — data storage, functions to manipulate this data
+-
+    - lib — logic of data manipulation, event handlers, auxiliary code
+-
+    - api — communication with external APIs, backend API methods
 
 ## Learn More
+
+To learn more about Next.js, take a look at the following resource:
+
+- [Feature-Sliced Design Documentation](https://feature-sliced.design/) - learn about Feature-Sliced Design for frontend
+  projects .
 
 To learn more about Next.js, take a look at the following resources:
 
 - [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
 - [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions
+are welcome!
 
-## Deploy on Vercel
+## License
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+This project is licensed under the MIT License.
