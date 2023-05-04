@@ -1,6 +1,7 @@
-# Next.js with Feature-Sliced Design
+# Next.js with Feature-Sliced Design v2.0-beta
 
-This is a Next.js frontend web application designed using the Feature-Sliced Design architectural methodology.
+This is a [Next.js](https://nextjs.org/) frontend web application designed using
+the [Feature-Sliced Design](https://feature-sliced.design/) architectural methodology.
 
 ## Installation and Running
 
@@ -19,11 +20,6 @@ yarn dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-# Next.js with Feature-Sliced Design
-
-This is a [Next.js](https://nextjs.org/) frontend web application designed using
-the [Feature-Sliced Design](https://feature-sliced.design/) architectural methodology.
 
 ## Usage
 
@@ -60,32 +56,29 @@ the Feature-Sliced Design architectural methodology.
 To work with the code, you can follow the following guidelines:
 
 - There are 6 layers in total, arranged from most responsibility and dependency to least:
--
     - App
--
     - Pages
--
     - Widgets
--
     - Features
--
     - Entities
--
     - Shared
+
+
 - You don't have to use every layer in your project — only add them if you think it brings value to your project.
+
+
 - Slices are the second level in the organizational hierarchy of Feature-Sliced Design. Their main purpose is to group
   code by its meaning for the product, business or just the application.
--
+
+
 - Segments are the third and final level in the organizational hierarchy, and their purpose is to group code by its
   technical nature.
+
+
 - There a few standardized segment names:
--
     - ui — UI components, data formatting functions
--
     - model — data storage, functions to manipulate this data
--
     - lib — logic of data manipulation, event handlers, auxiliary code
--
     - api — communication with external APIs, backend API methods
 
 ## Learn More
