@@ -10,14 +10,21 @@
   },
   "dependencies": {
     "@next/font": "13.3.4",
+    "@reduxjs/toolkit": "^1.9.5",
     "@types/node": "18.16.3",
     "@types/react": "18.2.0",
     "@types/react-dom": "18.2.1",
+    "axios": "^1.4.0",
     "bootstrap": "^5.2.3",
+    "formik": "^2.2.9",
     "next": "13.3.4",
     "react": "18.2.0",
     "react-bootstrap": "^2.7.4",
     "react-dom": "18.2.0",
-    "typescript": "5.0.4"
+    "react-redux": "^8.0.5",
+    "react-toastify": "^9.1.2",
+    "sass": "^1.62.1",
+    "typescript": "5.0.4",
+    "yup": "^1.1.1"
   }
 }
