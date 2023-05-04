@@ -56,6 +56,7 @@ the Feature-Sliced Design architectural methodology.
 To work with the code, you can follow the following guidelines:
 
 - There are 6 layers in total, arranged from most responsibility and dependency to least:
+
     - App
     - Pages
     - Widgets
@@ -76,6 +77,7 @@ To work with the code, you can follow the following guidelines:
 
 
 - There a few standardized segment names:
+
     - ui — UI components, data formatting functions
     - model — data storage, functions to manipulate this data
     - lib — logic of data manipulation, event handlers, auxiliary code
