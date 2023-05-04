@@ -20,6 +20,7 @@
       "@app/*": ["./app/*"],
       "@public/*": ["./../public/*"],
       "@entities/*": ["./entities/*"],
+      "@processes/*": ["./processes/*"],
       "@features/*": ["./features/*"],
       "@shared/*": ["./shared/*"],
       "@widgets/*": ["./widgets/*"],
