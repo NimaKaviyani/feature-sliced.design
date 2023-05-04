@@ -7,11 +7,12 @@ const Login = () => {
 
   return (
     <>
-      <section className={styles.authForm}>
-        <Row className='justify-content-center'>
+      <section className={styles.wrapper}>
+        <Row className='justify-content-center w-100'>
           <Col md={8} lg={8} xl={6}>
             <Row>
               <Col>
+                <h1 className='h3 text-center mb-5'>Login</h1>
                 <Form>
                   <Form.Group className='mb-3' controlId='formBasicEmail'>
                     <Form.Label>Email address</Form.Label>
