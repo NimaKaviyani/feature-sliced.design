@@ -1,10 +1,12 @@
 import {Col, Form, Row, Button} from 'react-bootstrap';
-import React, {ReactElement} from 'react';
+import React, {ReactElement, useState} from 'react';
 import Authentication from '@app/layouts/authentication';
 import styles from '@styles/pages/login.module.scss';
+import FormInputGroup from '@entities/form-input-group';
 
 const Login = () => {
-
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
   return (
     <>
       <section className={styles.wrapper}>
@@ -14,21 +16,26 @@ const Login = () => {
               <Col>
                 <h1 className='h3 text-center mb-5'>Login</h1>
                 <Form>
-                  <Form.Group className='mb-3' controlId='formBasicEmail'>
-                    <Form.Label>Email address</Form.Label>
-                    <Form.Control type='email' placeholder='Enter email' />
-                    <Form.Text className='text-muted'>
-                      We'll never share your email with anyone else.
-                    </Form.Text>
-                  </Form.Group>
-                  <Form.Group className='mb-3' controlId='formBasicPassword'>
-                    <Form.Label>Password</Form.Label>
-                    <Form.Control type='password' placeholder='Password' />
-                  </Form.Group>
-                  <Form.Group className='mb-3' controlId='formBasicCheckbox'>
-                    <Form.Check type='checkbox' label='Check me out' />
-                  </Form.Group>
-                  <Button variant='primary' type='submit'>
+                  <FormInputGroup
+                    label='Email address'
+                    placeholder='Emter email'
+                    name='email'
+                    value={email}
+                    error={''}
+                    onChange={() => null}
+                    onBlur={() => null}
+                  />
+                  <FormInputGroup
+                    label='Password'
+                    placeholder='Password'
+                    name='password'
+                    type='password'
+                    value={password}
+                    error={''}
+                    onChange={() => null}
+                    onBlur={() => null}
+                  />
+                  <Button variant='outline-primary' type='submit' className='d-block w-100'>
                     Submit
                   </Button>
                 </Form>

@@ -16,6 +16,71 @@ $theme-colors: (
 
 @import "~bootstrap/scss/bootstrap";
 
+.form-control {
+    + .input-group-text {
+        @include transition($input-transition);
+    }
+
+    &:focus {
+        + .input-group-text {
+            border-color: $input-focus-border-color;
+        }
+    }
+
+    &.is-invalid {
+        &:focus {
+            box-shadow: none;
+        }
+
+        + .input-group-text {
+            border-color: $danger;
+
+            svg {
+                stroke: $danger;
+            }
+        }
+    }
+}
+.invalid-feedback {
+    color: $danger;
+    position: absolute;
+    bottom: 0;
+    transform: translateY(100%);
+}
+.input-group > {
+    .form-control {
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+        border-inline-end: none;
+    }
+
+    .input-group-text {
+        border-inline-start: none;
+    }
+}
+.form-check {
+    margin-bottom: 0;
+}
+.form-label {
+    margin-bottom: 0.1rem;
+}
+.form-check-input {
+    background-color: #F9FBFC;
+    border: 1px solid #EFEFF0;
+
+    &:focus {
+        box-shadow: none;
+        border-color: #EFEFF0;
+    }
+
+    &:checked {
+        border-color: #3A86F2 !important;
+    }
+}
+.was-validated .form-control:invalid,
+.form-control.is-invalid {
+    background-image: none;
+}
 
 [lang="fa"], [lang="ar"] {
 
