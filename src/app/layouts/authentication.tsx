@@ -3,7 +3,7 @@ import {Col, Container, Row} from 'react-bootstrap';
 import styles from '@styles/layouts/authentication.module.scss';
 import {Inter} from 'next/font/google';
 import Head from 'next/head';
-import AuthenticationAside from '@widgets/authentication/authentication-aside';
+import AuthenticationAside from '@widgets/authentication-aside/authentication-aside';
 
 const inter = Inter({subsets: ['latin']});
 
