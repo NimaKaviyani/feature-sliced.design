@@ -1,9 +1,18 @@
-.wrapper {
+$sidebar-width: 300px;
 
+.wrapper {
+    min-height: 100vh;
 }
 .aside {
-
+    width: $sidebar-width;
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: stretch;
+    border-right: 1px solid white;
+    z-index: 9;
 }
 .section {
-
+    padding-inline-start: $sidebar-width;
+    position: relative;
 }

@@ -3,6 +3,8 @@ import {Col, Container, Row} from "react-bootstrap";
 import styles from "@styles/layouts/dashboard.module.scss";
 import {Inter} from 'next/font/google';
 import Head from "next/head";
+import Header from '@widgets/panel-header';
+import Sidebar from '@widgets/panel-sidebar';
 
 const inter = Inter({subsets: ['latin']});
 
@@ -10,7 +12,7 @@ interface LayoutProps {
   children: ReactNode,
 }
 
-const DashboardLayout = ({children}: LayoutProps): ReactElement => {
+const PanelLayout = ({children}: LayoutProps): ReactElement => {
   return (
     <>
       <Head>
@@ -23,11 +25,17 @@ const DashboardLayout = ({children}: LayoutProps): ReactElement => {
         <Row className='g-0'>
           <Col className={styles.wrapper}>
             <aside className={styles.aside}>
-              {/*<Sidebar />*/}
+              <Sidebar />
             </aside>
             <section className={styles.section}>
-              {/*<Header />*/}
-              {children}
+              <Header />
+              <Container>
+                <Row className='mt-5'>
+                  <Col>
+                    {children}
+                  </Col>
+                </Row>
+              </Container>
             </section>
           </Col>
         </Row>
@@ -36,4 +44,4 @@ const DashboardLayout = ({children}: LayoutProps): ReactElement => {
   )
 };
 
-export default DashboardLayout;
+export default PanelLayout;
