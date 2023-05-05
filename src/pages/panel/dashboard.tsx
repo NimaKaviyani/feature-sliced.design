@@ -1,6 +1,5 @@
 import React, {ReactElement} from 'react';
 import Panel from '@app/layouts/panel';
-import {Col, Row} from 'react-bootstrap';
 
 const Dashboard = () => {
   return (

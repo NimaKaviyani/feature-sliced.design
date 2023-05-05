@@ -22,7 +22,7 @@ const Header = () => {
         <Navbar.Toggle />
         <Navbar.Collapse className='justify-content-end pe-3'>
           <Navbar.Text>
-            Signed in as: <a href='#login'>{fullName}</a>
+            Signed in as: <a href='#'>{fullName}</a>
           </Navbar.Text>
         </Navbar.Collapse>
       </Navbar>
