@@ -1,0 +1,14 @@
+.navbar {
+    height: 60px;
+}
+
+.navbarBrand {
+    font-size: 1rem;
+    margin-left: 1rem;
+}
+
+@media (prefers-color-scheme: dark) {
+    .vercelLogo {
+        filter: invert(1);
+    }
+}
