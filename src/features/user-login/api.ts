@@ -16,7 +16,7 @@ const sampleLoginRequest = async (values: LoginRequestParams) => {
           'user': {
             'email': values.email,
             'emailIsValidate': false,
-            'fullName': 'Nima',
+            'fullName': 'Nima Kaviyani',
             'type': 'User',
           },
         },
