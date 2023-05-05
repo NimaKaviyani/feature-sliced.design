@@ -1,12 +1,8 @@
-import React, {ReactNode} from 'react';
+import React from 'react';
 import {Button} from 'react-bootstrap';
-import {ButtonProps} from 'react-bootstrap/Button';
+import {BaseButtonProps} from './types';
 
-interface CustomButtonProps extends ButtonProps {
-  children: ReactNode;
-}
-
-const BaseButton = ({children, active, type, variant, size, as, className, disabled}: CustomButtonProps) => {
+const BaseButton = ({children, active, type, variant, size, as, className, disabled}: BaseButtonProps) => {
   return (
     <Button
       variant={variant}
