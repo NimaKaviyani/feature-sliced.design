@@ -1,10 +1,19 @@
-import React from 'react';
+import React, {ReactElement} from 'react';
+import Panel from '@app/layouts/panel';
+import {Col, Row} from 'react-bootstrap';
 
 const Dashboard = () => {
   return (
-    <>
-      DASHBOARD
-    </>
+        <>
+          <h1 className='h5 border-bottom border-white pb-3'>DASHBOARD</h1>
+        </>
+  );
+};
+Dashboard.getLayout = function getLayout(page: ReactElement) {
+  return (
+    <Panel>
+      {page}
+    </Panel>
   );
 };
 
