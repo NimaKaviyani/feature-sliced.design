@@ -9,7 +9,12 @@ const FormInput = ({required, placeholder, type, icon, name, value, error, onCha
   const Input = icon ? InputGroup : FormGroup;
 
   return (
-      <Input className={styles.inputGroup} size={size} style={{...((mb || mb === 0) && {marginBottom: `${mb}rem`})}} hasValidation={required}>
+    <Input
+      className={styles.inputGroup}
+      size={size}
+      style={{...((mb || mb === 0) && {marginBottom: `${mb}rem`})}}
+      {...(icon && {hasValidation: required})}
+    >
         <Form.Control
           size={size}
           id={name}
